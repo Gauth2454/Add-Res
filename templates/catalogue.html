@@ -1,0 +1,23 @@
+{% extends "base.html" %} <!--Jinja template which extends base.html page to this page-->
+{% block content %}
+<h1 style="text-align: center;">Catalogue</h1>
+<div class="data_shown">
+    <div class="card_div">
+        <ul style="list-style: none; display: inline-block;">
+            {% for mark in recipe %}
+                <div class="card">
+                    <li><img class="Images" src="{{mark['image_url']}}" alt="image"></li>
+                    <li><b>Recipe Name : </b>{{mark['recipeName']}}</li>
+                    <li><b>Date : </b>{{mark['date']}}</li>
+                    <li><b>Ingredients : </b>{{mark['ingredients']}}</li>
+                    <li><b>Instructions : </b>{{mark['instructions']}}</li>
+                    <li><b>Notes : </b>{{mark['notes']}}</li>
+                    <li><b>Recipe ID : </b><span><input class="myInp" value="{{mark['recipeID']}}" readonly></input></span><button class="btnCopy btn-shine"><span>Copy recipe id</span></button></li>
+                    <br><br>
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<script src="/static/js/script.js"></script>
+{% endblock %}

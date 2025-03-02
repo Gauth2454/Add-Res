@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="text-align: center;">Update Recipe</h1>
+<p style="font-size: 20px; text-align: center; margin-bottom: 40px;">{{confirm}}</p>
+<p style="font-size: 20px; text-align: center; margin-bottom: 40px;">{{error}}</p>
+<form action="/update" method="post" enctype="multipart/form-data">
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="recipeName"></label>
+            <input type="text" class="input" name="recipeName" id="recipeName" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">R</span>
+                <span class="label-char" style="--index: 1">e</span>
+                <span class="label-char" style="--index: 2">c</span>
+                <span class="label-char" style="--index: 3">i</span>
+                <span class="label-char" style="--index: 4">p</span>
+                <span class="label-char" style="--index: 5">e</span>
+                <span class="label-char" style="--index: 6">&nbsp;&nbsp;</span>
+                <span class="label-char" style="--index: 0">N</span>
+                <span class="label-char" style="--index: 1">a</span>
+                <span class="label-char" style="--index: 2">m</span>
+                <span class="label-char" style="--index: 3">e</span>
+            </label>
+        </div>
+    </div>
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="date"></label>
+            <input type="text" class="input" name="date" id="date" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">D</span>
+                <span class="label-char" style="--index: 1">a</span>
+                <span class="label-char" style="--index: 2">t</span>
+                <span class="label-char" style="--index: 3">e</span>
+            </label>
+        </div>
+    </div>
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="ingredients"></label>
+            <input type="text" class="input" name="ingredients" id="ingredients" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">I</span>
+                <span class="label-char" style="--index: 1">n</span>
+                <span class="label-char" style="--index: 2">g</span>
+                <span class="label-char" style="--index: 3">r</span>
+                <span class="label-char" style="--index: 4">e</span>
+                <span class="label-char" style="--index: 5">d</span>
+                <span class="label-char" style="--index: 6">i</span>
+                <span class="label-char" style="--index: 7">e</span>
+                <span class="label-char" style="--index: 8">n</span>
+                <span class="label-char" style="--index: 9">t</span>
+                <span class="label-char" style="--index: 10">s</span>
+            </label>
+        </div>
+    </div>
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="instructions"></label>
+            <input type="text" class="input" name="instructions" id="instructions" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">I</span>
+                <span class="label-char" style="--index: 1">n</span>
+                <span class="label-char" style="--index: 2">s</span>
+                <span class="label-char" style="--index: 3">t</span>
+                <span class="label-char" style="--index: 4">r</span>
+                <span class="label-char" style="--index: 5">u</span>
+                <span class="label-char" style="--index: 6">c</span>
+                <span class="label-char" style="--index: 7">t</span>
+                <span class="label-char" style="--index: 8">i</span>
+                <span class="label-char" style="--index: 9">o</span>
+                <span class="label-char" style="--index: 10">n</span>
+                <span class="label-char" style="--index: 11">s</span>
+            </label>
+        </div>
+    </div>
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="notes"></label>
+            <input type="text" class="input" name="notes" id="notes" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">N</span>
+                <span class="label-char" style="--index: 1">o</span>
+                <span class="label-char" style="--index: 2">t</span>
+                <span class="label-char" style="--index: 3">e</span>
+                <span class="label-char" style="--index: 4">s</span>
+            </label>
+        </div>
+    </div>
+    <div class="input_text">
+        <div class="wave-group">
+            <label for="recipeID"></label>
+            <input type="text" class="input" name="recipeID" id="recipeID" required>
+            <span class="bar"></span>
+            <label class="label">
+                <span class="label-char" style="--index: 0">R</span>
+                <span class="label-char" style="--index: 1">e</span>
+                <span class="label-char" style="--index: 2">c</span>
+                <span class="label-char" style="--index: 3">i</span>
+                <span class="label-char" style="--index: 4">p</span>
+                <span class="label-char" style="--index: 5">e</span>
+                <span class="label-char" style="--index: 6">I</span>
+                <span class="label-char" style="--index: 7">D</span>
+            </label>
+        </div>
+    </div>
+    <div class="file_input">
+        <label for="image" class="add-form">Upload Image&nbsp;</label>
+        <input class="file_button" type="file" name="image" id="image" accept="image/*">
+    </div>
+    <div class="add_item">
+        <button class="button" type="submit">
+            <span class="button__text">Update</span>
+            <span class="button__icon"><svg class="svg" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></span>
+        </button>
+    </div>
+</form>
+
+{% endblock %}

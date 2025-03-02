@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Kelly+Slab&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+
+nav a{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+nav a:hover{
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+nav a:active{
+  transform: translateY(-1px);
+}
+
+body{
+    background: url('/static/images/mango.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: auto auto;
+}
+header {
+    padding-bottom: 50px;
+}
+header h1{
+    text-align: center;
+}
+nav{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav ul{
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 30px; /* Adds spacing between items */
+}
+
+.title_image{
+  display: block;
+  width: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.add_item{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* home CSS start */
+.data_shown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Images{
+  height: fit-content;
+  width: 300px;
+  padding: 30px;
+  border-radius: 25% 10%;
+}
+.table{
+  display: flex;
+  justify-content: center;
+}
+#Form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.full-line{
+  display:table;
+  width: 100%;
+}
+
+.card {
+  box-sizing: border-box;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  border-radius: 17px;
+  transition: all 0.5s;
+  padding: 20px 20px 0px 20px;
+  margin: 20px 20px 30px 20px;
+
+}
+/* data shown CSS end */
+/* home CSS end */
+
+
+/* addRecipe css start */
+.add_item{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.file_input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file_button{
+  border: none;
+}
+/* text input css start */ 
+.input_text{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.wave-group {
+    position: relative;
+}
+.wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 500px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: black;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 500px;
+  }
+  
+  .wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-group .bar:before {
+    left: 50%;
+  }
+  
+  .wave-group .bar:after {
+    right: 50%;
+  }
+  
+  .wave-group .input:focus ~ .bar:before,
+  .wave-group .input:focus ~ .bar:after {
+    width: 50%;
+  }
+/* Text input css end */
+
+/* add button css start */
+.button {
+    --main-focus: #2d8cf0;
+    --font-color: #323232;
+    --bg-color-sub: #dedede;
+    --bg-color: #eee;
+    --main-color: #323232;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: var(--font-color);
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: var(--main-color);
+  }
+  
+  .button:hover {
+    background: var(--bg-color);
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+  }
+
+  /* add button css end */
+/* addRecipe CSS end */
+
+/* delete button css */
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(33px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+
+/* Input css*/
+.myInp{
+  background: transparent;
+  border: none;
+  font-size: small;
+}
+.myInp:focus{
+  outline: none;
+}
+/* copy button css */
+/* From Uiverse.io by mobinkakei */ 
+.btn-shine {
+  position: relative;
+  margin-top: 5px;
+  padding: 5px 10px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  color: #1d89ff;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.btn-shine span {
+  color: #164ca7;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.btn-shine:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+.btn-shine:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-shine span {
+  z-index: 20;
+}
+
+.btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
